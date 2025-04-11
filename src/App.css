@@ -48,7 +48,7 @@
 .row {
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   margin-left: -12px;
   margin-right: -12px;
 }
@@ -93,5 +93,69 @@
   justify-content: center;
   align-items: center;
   display: flex;
+  margin-bottom: 5px;
+  transition: all 200ms linear;
+}
 
+.icon:hover {
+  background-color: #FF5300;
+
+}
+
+.icon:hover path {
+  fill: white;
+}
+
+.icon-container {
+  position: absolute;
+  top: 37px;
+  right: -50%;
+  overflow: hidden;
+  transition: all 200ms linear;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover .icon-container {
+  right: 0;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+@media (min-width:576px) {
+  .col-sm-6 {
+    width: 50%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+@media (min-width:768px) {
+  .col-md-4 {
+    width: 33.33%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+@media (min-width:992px) {
+  .col-lg-3 {
+    width: 25%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .flex-wrap {
+    flex-wrap: nowrap;
+  }
 }
